@@ -74,6 +74,53 @@ function form(string $action, string $method = 'post'): Comblock_Html_Node
 
 /**
  * @since 1.0.0
+ * @return Comblock_Html_Node
+ */
+function fieldset(): Comblock_Html_Node
+{
+    return Comblock_Html_Node::tag('fieldset');
+}
+
+/**
+ * @since 1.0.0
+ * @return Comblock_Html_Node
+ */
+function legend(): Comblock_Html_Node
+{
+    return Comblock_Html_Node::tag('legend');
+}
+
+/**
+ * @since 1.0.0
+ * @param string $for
+ * @return Comblock_Html_Node
+ */
+function label(string $for): Comblock_Html_Node
+{
+    return Comblock_Html_Node::tag('label')
+        ->attr('for', $for);
+}
+
+/**
+ * @since 1.0.0
+ * @return Comblock_Html_Node
+ */
+function figcaption(): Comblock_Html_Node
+{
+    return Comblock_Html_Node::tag('figcaption');
+}
+
+/**
+ * @since 1.0.0
+ * @return Comblock_Html_Node
+ */
+function figure(): Comblock_Html_Node
+{
+    return Comblock_Html_Node::tag('figure');
+}
+
+/**
+ * @since 1.0.0
  * @param string $name
  * @param string $value
  * @return Comblock_Html_Node
@@ -84,7 +131,6 @@ function input(string $name, string $value): Comblock_Html_Node
         ->attr('name', $name)
         ->attr('value', $value);
 }
-
 
 /**
  * @since 1.0.0
@@ -152,6 +198,32 @@ function option(string $value, string $label): Comblock_Html_Node
         ->value($label);
 }
 
+/**
+ * @since 1.0.0
+ * @return Comblock_Html_Node
+ */
+function ul(): Comblock_Html_Node
+{
+    return Comblock_Html_Node::tag('ul');
+}
+
+/**
+ * @since 1.0.0
+ * @return Comblock_Html_Node
+ */
+function ol(): Comblock_Html_Node
+{
+    return Comblock_Html_Node::tag('ol');
+}
+
+/**
+ * @since 1.0.0
+ * @return Comblock_Html_Node
+ */
+function li(): Comblock_Html_Node
+{
+    return Comblock_Html_Node::tag('li');
+}
 
 /**
  * @since 1.0.0
