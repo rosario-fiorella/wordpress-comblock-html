@@ -93,4 +93,18 @@ class Comblock_Html_Node
 
 		return $this;
 	}
+
+	/**
+	 * @since 1.0.0
+	 * @param self[] $node
+	 * @return self
+	 */
+	public function add(array $nodes): self
+	{
+		foreach ($nodes as $node) {
+			$this->append($node);
+		}
+
+		return $this;
+	}
 }

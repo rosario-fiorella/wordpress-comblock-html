@@ -122,27 +122,32 @@ function figure(): Comblock_Html_Node
 /**
  * @since 1.0.0
  * @param string $name
+ * @param string $placeholder
  * @param string $value
  * @return Comblock_Html_Node
  */
-function input(string $name, string $value): Comblock_Html_Node
+function input(string $name, string $placeholder, string $value = ''): Comblock_Html_Node
 {
     return Comblock_Html_Node::tag('input')
+        ->attr('type', 'text')
         ->attr('name', $name)
-        ->attr('value', $value);
+        ->attr('value', $value)
+        ->attr('placeholder', $placeholder);
 }
 
 /**
  * @since 1.0.0
  * @param string $name
+ * @param string $placeholder
  * @param string $value
  * @return Comblock_Html_Node
  */
-function textarea(string $name, string $value = ''): Comblock_Html_Node
+function textarea(string $name, string $placeholder, string $value = ''): Comblock_Html_Node
 {
     return Comblock_Html_Node::tag('textarea')
         ->attr('name', $name)
-        ->attr('value', $value);
+        ->attr('placeholder', $placeholder)
+        ->value($value);
 }
 
 /**
@@ -157,6 +162,22 @@ function checkbox(string $name, string $value = ''): Comblock_Html_Node
         ->attr('type', 'checkbox')
         ->attr('name', $name)
         ->attr('value', $value);
+}
+
+/**
+ * @since 1.0.0
+ * @param string $name
+ * @param string $value
+ * @param string $placeholder
+ * @return Comblock_Html_Node
+ */
+function password(string $name, string $value = '', string $placeholder = ''): Comblock_Html_Node
+{
+    return Comblock_Html_Node::tag('input')
+        ->attr('type', 'password')
+        ->attr('name', $name)
+        ->attr('value', $value)
+        ->attr('placeholder', $placeholder);
 }
 
 /**
