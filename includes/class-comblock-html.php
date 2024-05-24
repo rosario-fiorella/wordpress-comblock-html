@@ -55,8 +55,11 @@ class Comblock_Html
         require_once $plugin_dir_path . 'includes/class-comblock-html-activator.php';
         require_once $plugin_dir_path . 'includes/class-comblock-html-deactivator.php';
         require_once $plugin_dir_path . 'includes/class-comblock-html-enqueue.php';
-        require_once $plugin_dir_path . 'includes/class-comblock-html-node.php';
-        require_once $plugin_dir_path . 'includes/class-comblock-html-render.php';
+        require_once $plugin_dir_path . 'includes/trait-comblock-html-attributes.php';
+        require_once $plugin_dir_path . 'includes/trait-comblock-html-children.php';
+        require_once $plugin_dir_path . 'includes/trait-comblock-html-content.php';
+        require_once $plugin_dir_path . 'includes/class-comblock-html-dom.php';
+        require_once $plugin_dir_path . 'includes/class-comblock-html-document.php';
         require_once $plugin_dir_path . 'includes/class-comblock-html-helper.php';
 
         $this->loader = new Comblock_Html_Loader();

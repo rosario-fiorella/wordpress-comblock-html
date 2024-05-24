@@ -2,7 +2,7 @@
 
 /**
  * @package comblock-html
- * @subpackage comblock-html/public
+ * @subpackage comblock-html/includes
  */
 class Comblock_Html_Enqueue
 {
