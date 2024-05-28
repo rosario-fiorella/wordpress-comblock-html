@@ -80,9 +80,9 @@ $document->add(
   div()
     ->id('my-gallery')
     ->css('row')
-    ->append(img('/my/gallery/image-1.jpg')->css('col-sm-3 img-fluid')->alt('My image 1'))
-    ->append(img('/my/gallery/image-2.jpg')->css('col-sm-3 img-fluid')->alt('My image 2'))
-    ->append(img('/my/gallery/image-3.jpg')->css('col-sm-3 img-fluid')->alt('My image 3'))
+    ->append(img('/my/gallery/image-1.jpg', 'My image 1')->css('col-sm-3 img-fluid'))
+    ->append(img('/my/gallery/image-2.jpg', 'My image 2')->css('col-sm-3 img-fluid'))
+    ->append(img('/my/gallery/image-3.jpg', 'My image 3')->css('col-sm-3 img-fluid'))
 );
 
 // ... other items
@@ -131,7 +131,7 @@ namespace Comblock_Html_Helper;
 function a(string $href, string $label, string $target = '_self') {}
 function div() {}
 function p(string $text = '') {}
-function img(string $src) {}
+function img(string $src, string $alt = '') {}
 function form(string $action, string $method = 'post') {}
 function fieldset() {}
 function legend() {}

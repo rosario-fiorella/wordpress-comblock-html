@@ -54,11 +54,12 @@ function p(string $text = ''): Comblock_Html_Dom
 /**
  * @since 1.0.0
  * @param string $src
+ * @param string $alt
  * @return Comblock_Html_Dom
  */
-function img(string $src): Comblock_Html_Dom
+function img(string $src, string $alt = ''): Comblock_Html_Dom
 {
-    return tag('img')->src($src);
+    return tag('img')->src($src)->alt($alt);
 }
 
 /**
